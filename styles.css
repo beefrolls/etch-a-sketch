@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Coming+Soon&family=Covered+By+Your+Grace&family=Delicious+Handrawn&family=Gloria+Hallelujah&family=Gochi+Hand&family=Knewave&family=Mansalva&family=Patrick+Hand+SC&family=Press+Start+2P&family=Rampart+One&family=Reenie+Beanie&family=Rock+Salt&family=Rubik+Marker+Hatch&family=Schoolbell&family=Sedgwick+Ave&family=Shantell+Sans:ital,wght@0,300;0,500;1,400&family=Sigmar+One&family=Silkscreen&family=Waiting+for+the+Sunrise&display=swap');
+/*Fonts
+font-family: 'Chelsea Market', cursive;
+font-family: 'Coming Soon', cursive;
+font-family: 'Covered By Your Grace', cursive;
+font-family: 'Delicious Handrawn', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Gochi Hand', cursive;
+font-family: 'Knewave', cursive;
+font-family: 'Mansalva', cursive;
+font-family: 'Patrick Hand SC', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Rampart One', cursive;
+font-family: 'Reenie Beanie', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Rubik Marker Hatch', cursive;
+font-family: 'Schoolbell', cursive;
+font-family: 'Sedgwick Ave', cursive;
+font-family: 'Shantell Sans', cursive;
+font-family: 'Sigmar One', cursive;
+font-family: 'Silkscreen', cursive;
+font-family: 'Waiting for the Sunrise', cursive;
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+body > * {
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Rampart One', cursive;
+    font-size: 80px;
+}
+
+.body {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    gap: 10em;
+}
+
+.main > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    flex-wrap: wrap;
+    height: 600px;
+    width: 200px;
+    border: solid 3px;
+    background-color: wheat;
+}
+
+.left > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 100%;
+}
+
+.size-list {
+    display: none; 
+    position: absolute; 
+    left: 8em; 
+    bottom: 15em;
+}
+
+label {
+    width: 50px;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 25px;
+}
+
+.color,
+.fill-color {
+    padding: 10px;
+    gap: 2em;
+}
+
+input#color,
+input#fill-color {
+    border: solid 2px;
+    height: 3.5em;
+    width: 3.5em;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    border: solid 2px;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 25px;
+}
+
+#clear-all > button {
+    height: 80px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+
+.right {
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.right > * {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.right > .misc {
+    justify-content: flex-end;
+    gap: 1.5em;
+}
+
+.misc button {
+    display: flex;
+    font-size: medium;
+    width: 3.5em;
+    align-items: center;
+}
+
+
+.grid-container {
+    display: grid;
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    border: solid 3px;
+    grid-gap: 1px;
+    --blocksize: 10;
+    grid-template-columns: repeat(var(--blocksize), 1fr);
+    grid-template-rows: repeat(var(--blocksize), 1fr);
+}
+
+.grid-container div {
+    background-color: white;
+}
+
+.grid-container div:hover {
+    background-color: black;
+    transition: 0.2s ease;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 30px;
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+h3 {
+    font-size: 50px;
+    font-family: 'Rubik Marker Hatch', cursive;
+}
+
+
+/*Media Queries*/
+
+/*Max-widths:  
+    - 1000px (make gap smaller)
+    - 
+*/
+
+@media (max-width: 1100px) {
+    .main {
+        gap: 5em;
+    }
+}
+
+@media (max-width: 900px) {
+    .main {
+        gap: 2em;
+    }
+}
+
+@media (max-width: 800px) {
+    .main {
+        gap: 1em;
+    }
+}
+
+@media (max-width: 760px) {
+    .main {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 730px) {
+    .left {
+        height: 150px;
+        width: 520px;
+        flex-wrap: nowrap;
+        gap: 5px;
+    }
+
+    .size-list {
+        left: 0.5em;
+        bottom: 7em;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    li button {
+        height: 3em;
+    }
+
+    .color,
+    .fill-color {
+        gap: 3px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    button {
+        height: 80px;
+        width: 60px;
+        font-size: 15px;
+    }
+
+    .misc button {
+        height: 3.5em;
+    }
+}
+
+@media (max-width: 685px) {
+    h1 {
+        margin-top: 60px;
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        margin-top: 75px;
+        font-size: 60px;
+    }
+
+    .main {
+        gap: 1px;
+    }
+
+    .grid-container {
+        height: 450px;
+        width: 450px;
+    }
+
+    .left {
+        height: 100px;
+        width: 450px;
+        padding: 5px;
+        gap: 1px;
+    }
+
+    .size-list {
+        bottom: 5em;
+    }
+
+    li button {
+        width: 50px;
+        font-size: x-small;
+    }
+
+    .right {
+        height: 550px;
+        width: 450px;
+    }
+
+    .color,
+    .fill-color {
+        flex-wrap: wrap-reverse;
+        gap: 5px;
+    }
+
+    label {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width: 530px) {
+    h1 {
+        margin-top: 70px;
+        font-size: 50px;
+    }
+
+    .main {
+        gap: 5em;
+    }
+
+    .grid-container {
+        height: 400px;
+        width: 400px;
+    }
+
+    .left {
+        height: 100px;
+        width: 400px;
+    }
+
+    .right {
+        width: 400px;
+        height: auto;
+        gap: 1em;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        margin-top: 80px;
+        font-size: 40px;
+    }
+
+
+    .grid-container {
+        height: 350px;
+        width: 350px;
+    }
+
+    .left {
+        height: 150px;
+        width: 350px;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .left > * {
+        flex: 1 1 25%;
+    }
+
+    .size-list {
+        bottom: 8em;
+    }
+
+    li button {
+        width: 45px;
+    }
+
+    button {
+        height: 50px;
+        width: 80px;
+    }
+
+    .color,
+    .fill-color {
+        padding: 0;
+    }
+
+    #eraser button,
+    #clear-all button{
+        width: 100px;
+        margin: 0px;
+    }
+
+    #clear-all button {
+        height: 50px;
+    }
+
+    #eraser {
+        position: relative;
+        left: 30px;
+    }
+
+    #clear-all {
+        position: relative;
+        right: 30px;
+    }
+
+    .right {
+        width: 350px;
+    }
+}
+
+@media (max-width: 420px) {
+    h1 {
+        margin-top: 70px;
+        font-size: 35px;
+    }
+
+    .main {
+        margin-bottom: 50px;
+    }
+    .grid-container {
+        height: 300px;
+        width: 300px;
+    }
+
+    .left {
+        width: 300px;
+    }
+
+    .left > * {
+        flex: 1 1 25%;
+    }
+
+    li button {
+        width: 40px;
+    }
+
+    button {
+        width: 80px;
+    }
+
+    #eraser button,
+    #clear-all button{
+        width: 80px;
+        margin: 0px;
+    }
+
+    #eraser {
+        position: relative;
+        left: 25px;
+    }
+
+    #clear-all {
+        position: relative;
+        right: 25px;
+    }
+
+    .right {
+        width: 300px;
+    }
+}

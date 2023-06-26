@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Etch-A-Sketch</title>    
+</head>
+<body>
+    <div class="header">
+        <img src=""/>
+        <div class="title">
+            <h1>Etch-A-Sketch</h1>
+        </div>
+    </div>
+    <div class="body">
+        <div class="main">
+            <div class="left" style="position: relative;">
+                <div class="button">
+                    <button id="size">GRID SIZE</button>
+                </div>
+                <div class="size-list">
+                    <ul style="list-style-type: none;">
+                        <li><button id="one">12 x 12</button></li>
+                        <li><button id="two">16 x 16</button></li>
+                        <li><button id="three">24 x 24</button></li>
+                        <li><button id="four">30 x 30</button></li>
+                        <li><button id="five">36 x 26</button></li>
+                        <li><button id="six">48 x 48</button></li>
+                        <li><button id="seven">64 x 64</button></li>
+                    </ul>
+                </div>
+                <div class="color">
+                    <label for="color">COLOR</label>
+                    <input type="color" id="color" name="color">
+                </div>
+                <div class="fill-color">
+                    <label for="fill-color">FILL COLOR</label>
+                    <input type="color" id="fill-color" name="fill-color">
+                </div>
+                <div class="button" id="eraser">
+                    <button id="erase">ERASER</button>
+                </div>
+                <div class="button" id="clear-all">
+                    <button id="clear">CLEAR GRID</button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="misc">
+                    <button>RGB Mode</button>
+                    <button>Remove lines</button>
+                </div>
+                <div class="gridbox">
+                    <div class="grid-container">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <p>Powered by <h3>&nbspBeefrolls</h3></p>
+    </div>
+    </div>
+    <script src="code.js"></script>
+
+</body>
+</html>
